@@ -41,8 +41,10 @@ body {
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    animation: jump;
+    animation-duration: 0.3s;
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -50,4 +52,43 @@ body {
   font-family: "Barrio", cursive;
   font-size: 4em;
   margin-bottom: 10px;
+}
+
+.reset{
+  border: 4px solid black;
+  background-color: rgba(240, 240, 41, 0.911);
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+  &:hover{
+    transform: scale(1.2);
+
+  }
+}
+
+
+.empty{
+  background-color: black;
+  animation-name: desv;
+}
+
+@keyframes jump {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+
+@keyframes desv {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
