@@ -1,0 +1,53 @@
+@import "constants";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  box-sizing: content-box;
+  width: $boardSize;
+  height: $boardSize;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 2px solid;
+}
+
+.tile {
+  background-color: #fff;
+  width: $tileSize;
+  height: $tileSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  user-select: none;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    background-color: #82fc86;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  font-family: "Barrio", cursive;
+  font-size: 4em;
+  margin-bottom: 10px;
+}
